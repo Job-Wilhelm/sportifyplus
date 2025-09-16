@@ -33,11 +33,6 @@ app.use(express.json());
 // 處理來自 HTML form 的 application/x-www-form-urlencoded 資料格式
 // 設定 extended: true 可支援巢狀物件（例如 user[name]=Jenni）
 app.use(express.urlencoded({ extended: true }));
-
-const corsOptions = {
-  origin: 'http://job-wilhelm.github.io'
-}
-
 app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
