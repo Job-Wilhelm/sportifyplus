@@ -9,7 +9,8 @@
     "docker-build": "docker compose --env-file .env up -d --build",
     "docker-clean": "docker compose --env-file .env down -v",
     "lint": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "start:migrated": "npm run migrate && npm run start"
   },
   "dependencies": {
     "@mux/mux-node": "^11.1.0",
