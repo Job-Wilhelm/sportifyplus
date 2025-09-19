@@ -33,7 +33,10 @@ app.use(express.json());
 // 處理來自 HTML form 的 application/x-www-form-urlencoded 資料格式
 // 設定 extended: true 可支援巢狀物件（例如 user[name]=Jenni）
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({origin:'http://job-wilhelm.github.io',
+             methods: ['GET','POST','PUT','PATCH','DELETE'],
+              credentials: true
+             }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 //讓public資料夾可以存放upload.html
