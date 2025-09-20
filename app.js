@@ -34,7 +34,7 @@ app.use(express.json());
 // 設定 extended: true 可支援巢狀物件（例如 user[name]=Jenni）
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({origin:'http://job-wilhelm.github.io',
-             methods: ['GET','POST','PUT','PATCH','DELETE'],
+             methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
               credentials: true
              }));
 app.use(cookieParser());
